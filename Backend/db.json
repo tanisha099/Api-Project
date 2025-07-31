@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Mouse",
+      "price": 599,
+      "category": "Electronics",
+      "description": "Smooth and responsive wireless mouse",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Running Shoes",
+      "price": 1499,
+      "category": "Footwear",
+      "description": "Comfortable running shoes for everyday use",
+      "inStock": false
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "price": 3499,
+      "category": "Electronics",
+      "description": "Track your fitness and notifications",
+      "inStock": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Tanisha Muvel",
+      "email": "tanisha@example.com",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Sharma",
+      "email": "rahul@example.com",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Priya Verma",
+      "email": "priya@example.com",
+      "role": "user"
+    }
+  ]
+}
