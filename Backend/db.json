@@ -43,6 +43,13 @@
       "name": "Priya Verma",
       "email": "priya@example.com",
       "role": "user"
+    },
+    {
+      "id": "AX0hAFF5h1tkkuMcDLMYp",
+      "fullname": "MasterMind",
+      "username": "kmkaran5690@gmail.com",
+      "password": "123456@Ka"
     }
-  ]
+  ],
+  "carts": []
 }

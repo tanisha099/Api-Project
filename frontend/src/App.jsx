@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react';
-import {asyncgetusers} from "./store/userActions"
+import React from 'react';
+import Navbar from "./pages/components/Navbar"
+import Mainroutes from "./routes/Mainroutes"
 function App() {
-
-  useEffect(()=>{
-    asyncgetusers();
-  }, []);
   return (
-    <div>
-      hello
-      
-    </div>
+    <>
+     <Navbar />
+      <Mainroutes/>
+    </>  
   );
 }
 
