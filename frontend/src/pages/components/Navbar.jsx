@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
+
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Left links */}
@@ -27,7 +28,22 @@ function Navbar() {
           >
             Products
           </NavLink>
-           <NavLink
+
+           {user ? (
+      <>
+      <NavLink
+            to="/admin/create-product"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-semibold"
+                : "text-gray-700 hover:text-blue-600"
+            }
+          >
+            CreateProduct
+          </NavLink>
+      </> ):(
+        <>
+        <NavLink
             to="/login"
             className={({ isActive }) =>
               isActive
@@ -37,6 +53,9 @@ function Navbar() {
           >
             Login
           </NavLink>
+        </>
+      )
+    }
         </div>
 
         {/* Right text */}

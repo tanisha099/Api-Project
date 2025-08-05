@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: [],
+  users: null,
 };
 
 const userSlice = createSlice({
-  name: "users", // ✅ no extra space
+  name: "users", 
   initialState,
   reducers: {
     loadUsers: (state, action) => {

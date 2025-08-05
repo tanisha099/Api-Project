@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Wireless Mouse",
       "price": 599,
       "category": "Electronics",
@@ -9,7 +9,7 @@
       "inStock": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Running Shoes",
       "price": 1499,
       "category": "Footwear",
@@ -17,7 +17,7 @@
       "inStock": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Smart Watch",
       "price": 3499,
       "category": "Electronics",
@@ -27,19 +27,19 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Tanisha Muvel",
       "email": "tanisha@example.com",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Rahul Sharma",
       "email": "rahul@example.com",
       "role": "user"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Priya Verma",
       "email": "priya@example.com",
       "role": "user"
@@ -49,6 +49,24 @@
       "fullname": "MasterMind",
       "username": "kmkaran5690@gmail.com",
       "password": "123456@Ka"
+    },
+    {
+      "id": "zy772l5FHQrSLf0uaLSjM",
+      "fullname": "Neha Sharma",
+      "username": "nehasharma23@gmail.com",
+      "password": "NehaSharma2123"
+    },
+    {
+      "id": "ijn1waj8MoQl2SQQYaaEh",
+      "fullname": "Himanshi ",
+      "username": "himashi2912@gmail.com",
+      "password": "Himanshi@123"
+    },
+    {
+      "id": "gxCMSk8W3x8YZYeWUQGqW",
+      "fullname": "Akash Sharma",
+      "username": "akash123@gmail.com",
+      "password": "Mynameis123"
     }
   ],
   "carts": []
