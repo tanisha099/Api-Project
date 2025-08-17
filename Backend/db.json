@@ -1,49 +1,15 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Wireless Mouse",
-      "price": 599,
-      "category": "Electronics",
-      "description": "Smooth and responsive wireless mouse",
-      "inStock": true
-    },
-    {
-      "id": "2",
-      "name": "Running Shoes",
-      "price": 1499,
-      "category": "Footwear",
-      "description": "Comfortable running shoes for everyday use",
-      "inStock": false
-    },
-    {
-      "id": "3",
-      "name": "Smart Watch",
-      "price": 3499,
-      "category": "Electronics",
-      "description": "Track your fitness and notifications",
-      "inStock": true
+      "id": "l8bNHzT5ATdOxAL6jwMj5",
+      "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
+      "title": "white Shirt ",
+      "price": "4000",
+      "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
+      "category": "Shirt"
     }
   ],
   "users": [
-    {
-      "id": "1",
-      "name": "Tanisha Muvel",
-      "email": "tanisha@example.com",
-      "role": "admin"
-    },
-    {
-      "id": "2",
-      "name": "Rahul Sharma",
-      "email": "rahul@example.com",
-      "role": "user"
-    },
-    {
-      "id": "3",
-      "name": "Priya Verma",
-      "email": "priya@example.com",
-      "role": "user"
-    },
     {
       "id": "AX0hAFF5h1tkkuMcDLMYp",
       "fullname": "MasterMind",
@@ -67,6 +33,12 @@
       "fullname": "Akash Sharma",
       "username": "akash123@gmail.com",
       "password": "Mynameis123"
+    },
+    {
+      "id": "qHr8K3mDEgAFd2t4xW_jJ",
+      "fullname": "Manoj",
+      "username": "manojdada23@gmail.com",
+      "password": "Monojdada12"
     }
   ],
   "carts": []

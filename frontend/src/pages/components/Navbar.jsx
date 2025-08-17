@@ -1,12 +1,15 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-  return (
+  const user = useSelector((state) => state.user.users);
+  console.log(user, "user");
 
+  return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Left links */}
+        
+        {/* Left Links */}
         <div className="flex space-x-6">
           <NavLink
             to="/"
@@ -18,6 +21,7 @@ function Navbar() {
           >
             Home
           </NavLink>
+
           <NavLink
             to="/products"
             className={({ isActive }) =>
@@ -29,36 +33,33 @@ function Navbar() {
             Products
           </NavLink>
 
-           {user ? (
-      <>
-      <NavLink
-            to="/admin/create-product"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-600 font-semibold"
-                : "text-gray-700 hover:text-blue-600"
-            }
-          >
-            CreateProduct
-          </NavLink>
-      </> ):(
-        <>
-        <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              isActive
-                ? "text-blue-600 font-semibold"
-                : "text-gray-700 hover:text-blue-600"
-            }
-          >
-            Login
-          </NavLink>
-        </>
-      )
-    }
+          {/* Show CreateProduct if user exists, else show Login */}
+          {user ? (
+            <NavLink
+              to="/admin/create-product"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-700 hover:text-blue-600"
+              }
+            >
+              CreateProduct
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-700 hover:text-blue-600"
+              }
+            >
+              Login
+            </NavLink>
+          )}
         </div>
 
-        {/* Right text */}
+        {/* Right Text */}
         <div className="text-gray-600 font-medium">Demo</div>
       </div>
     </nav>

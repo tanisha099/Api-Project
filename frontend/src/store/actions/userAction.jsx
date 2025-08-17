@@ -20,15 +20,27 @@ export const asynclogoutuser = (user) => async (dispatchEvent,getState)=>{
         console.log(error);
     }
 };
-export const asyncloginuser = (user) => async (dispatchEvent,getState)=>{
-    try{
-         const res = await axios.get(`/users?email=${user.email}&password=${user.password}`);
-         localStorage.setItem("user", JSON.stringify(res.data[0]));
-         console.log("successful login")
-            console.log(res.data);
-        } catch (error){
-        console.log(error);
+export const asyncloginuser = (user) => async (dispatch, getState) => {
+  try {
+    const res = await axios.get(`/users?username=${user.username}&password=${user.password}`);
+
+    if (res.data.length > 0) {
+      const loggedInUser = res.data[0];
+
+      // ✅ Save to localStorage
+      localStorage.setItem("user", JSON.stringify(loggedInUser));
+
+      // ✅ Dispatch to Redux
+      dispatch(loadUsers(loggedInUser));
+
+      console.log("successful login");
+      console.log(loggedInUser);
+    } else {
+      console.log("Invalid credentials");
     }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const asyncregisteruser = (user) => async (dispatchEvent,getState)=>{
