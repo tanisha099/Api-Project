@@ -9,7 +9,10 @@ import { asyncupdateproduct , asyncdeleteproduct } from '../../store/actions/pro
 function ProductDetails() {
   const { id } = useParams();
    const navigate = useNavigate();
-  const products = useSelector((state) => state.products.products);
+  const  products  = useSelector((state) => state.products.products);
+const user = useSelector((state) => state.user.users);
+  console.log(user, "user");
+  console.log(products)
   const product = products?.find((product) => product.id == id);
    const { register, reset, handleSubmit } = useForm(
     {
@@ -68,6 +71,7 @@ const deletehandler = () =>{
         </div>
       </div>
       <div className='mt-2 flex  justify-center'>
+        {user && user?.isAdmin &&
         <form
         onSubmit={handleSubmit(UpdateProductHandler)}
         className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8 space-y-6"
@@ -148,7 +152,8 @@ const deletehandler = () =>{
         >
           Delete
         </button>
-      </form>
+      </form>}
+        
       </div>
       
     </div>

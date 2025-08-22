@@ -1,9 +1,17 @@
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { asynclogoutuser } from '../../store/actions/userAction';
 function Navbar() {
+   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.user.users);
   console.log(user, "user");
+
+  const logoutHandler = () =>{
+    dispatch(asynclogoutuser()); // ✅ dispatch available here
+    navigate("/login"); // ✅ redirect to login
+ 
+  }
 
   return (
     <nav className="bg-white shadow-md p-4 fixed w-full top-0 z-50">
@@ -35,7 +43,8 @@ function Navbar() {
 
           {/* Show CreateProduct if user exists, else show Login */}
           {user ? (
-            <NavLink
+            <>
+                    <NavLink
               to="/admin/create-product"
               className={({ isActive }) =>
                 isActive
@@ -45,6 +54,11 @@ function Navbar() {
             >
               CreateProduct
             </NavLink>
+            <NavLink to="/ProfileUser">Profile</NavLink>
+            <button onClick={logoutHandler}>Logut</button>
+            <NavLinkLink to="/addtocartdetails">Go to Cart</NavLinkLink>
+            </>
+    
           ) : (
             <NavLink
               to="/login"

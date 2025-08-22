@@ -1,5 +1,5 @@
 import axios from "../../api/axiosconfig";
-import { loadUsers } from "../reducers/userSlice";
+import { loadUsers, removeuser } from "../reducers/userSlice";
 
 export const asynccurrentuser = () => async (dispatch, getState) => {
   try {
@@ -13,12 +13,13 @@ export const asynccurrentuser = () => async (dispatch, getState) => {
     console.log(error);
   }
 };
-export const asynclogoutuser = (user) => async (dispatchEvent,getState)=>{
-    try{
-        localStorage.removeItem("user");
-        } catch (error){
-        console.log(error);
-    }
+export const asynclogoutuser = () => async (dispatch, getState) => {
+  try {
+    localStorage.removeItem("user");   // storage se user delete
+    dispatch(removeuser());            // redux state update
+  } catch (error) {
+    console.log("Logout error:", error);
+  }
 };
 export const asyncloginuser = (user) => async (dispatch, getState) => {
   try {
@@ -50,4 +51,24 @@ export const asyncregisteruser = (user) => async (dispatchEvent,getState)=>{
     } catch (error){
         console.log(error);
     }
+};
+
+export const asyncUpdateuser = (id, user) => async (dispatch) => {
+  try {
+    const { data } = await axios.patch(`/users/${id}`, user); // ✅ id instead of whole user object
+    console.log(data);
+
+    dispatch(asynccurrentuser());
+    localStorage.setItem("user", JSON.stringify(data));
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const asyncdeleteuser = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`/users/${id}`);
+    dispatch(asynclogoutuser());
+  } catch (error) {
+    console.log(error);
+  }
 };

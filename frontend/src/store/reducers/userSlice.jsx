@@ -5,14 +5,17 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-  name: "users", 
+  name: "users",
   initialState,
   reducers: {
     loadUsers: (state, action) => {
-      state.users = action.payload; // ✅ match key with initialState
+      state.users = action.payload;
     },
+    removeuser: (state) => {
+      state.users = null;
+    }
   },
 });
 
-export const { loadUsers } = userSlice.actions;
+export const { loadUsers, removeuser, updateuser } = userSlice.actions;
 export default userSlice.reducer;

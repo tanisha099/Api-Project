@@ -11,6 +11,8 @@ function Register() {
    const Navigate =useNavigate();
   const RegisterHandler = (user) => {
     user.id = nanoid();
+    user.isAdmin = false;
+    user.cart = [];
     console.log(user);
     dispatch(asyncregisteruser(user));
     Navigate("/login")

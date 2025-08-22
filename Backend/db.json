@@ -7,38 +7,70 @@
       "price": "4000",
       "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
       "category": "Shirt"
+    },
+    {
+      "id": "mp20-xw-GBvUcsyMU7sX5",
+      "image": "https://www.gentlemansguru.com/wp-content/uploads/2018/05/Mens-Black-Formal-Dress-Suit-Pant-from-Gentlemansguru.com_-scaled.jpg",
+      "title": "Black trouser",
+      "price": "1200",
+      "description": "“These classic black trousers are designed with a sleek straight fit, offering both comfort and style. Made from premium quality fabric, they feature a smooth finish, mid-rise waist, and versatile design that pairs well with formal shirts or casual tees. Perfect for office wear, evening outings, or everyday sophistication.”",
+      "category": "Mens Trouser"
     }
   ],
   "users": [
     {
-      "id": "AX0hAFF5h1tkkuMcDLMYp",
-      "fullname": "MasterMind",
-      "username": "kmkaran5690@gmail.com",
-      "password": "123456@Ka"
-    },
-    {
       "id": "zy772l5FHQrSLf0uaLSjM",
-      "fullname": "Neha Sharma",
-      "username": "nehasharma23@gmail.com",
-      "password": "NehaSharma2123"
-    },
-    {
-      "id": "ijn1waj8MoQl2SQQYaaEh",
-      "fullname": "Himanshi ",
-      "username": "himashi2912@gmail.com",
-      "password": "Himanshi@123"
+      "fullname": "Neha Misra",
+      "username": "nehamisra23@gmail.com",
+      "password": "NehaSharma2123",
+      "isAdmin": true,
+      "cart": []
     },
     {
       "id": "gxCMSk8W3x8YZYeWUQGqW",
-      "fullname": "Akash Sharma",
+      "fullname": "Akash Tiwari",
       "username": "akash123@gmail.com",
-      "password": "Mynameis123"
+      "password": "Mynameis123",
+      "cart": [
+        {
+          "productId": "l8bNHzT5ATdOxAL6jwMj5",
+          "quantity": 2
+        },
+        {
+          "productId": "mp20-xw-GBvUcsyMU7sX5",
+          "quantity": 6
+        }
+      ]
     },
     {
       "id": "qHr8K3mDEgAFd2t4xW_jJ",
       "fullname": "Manoj",
       "username": "manojdada23@gmail.com",
-      "password": "Monojdada12"
+      "password": "Monojdada12",
+      "cart": [
+        {
+          "product": {
+            "id": "l8bNHzT5ATdOxAL6jwMj5",
+            "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
+            "title": "white Shirt ",
+            "price": "4000",
+            "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
+            "category": "Shirt"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "l8bNHzT5ATdOxAL6jwMj5",
+            "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
+            "title": "white Shirt ",
+            "price": "4000",
+            "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
+            "category": "Shirt"
+          },
+          "quantity": 1
+        }
+      ]
     }
   ],
   "carts": []

@@ -1,9 +1,35 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {Link} from "react-router-dom";
+import { asyncUpdateuser } from "../store/actions/userAction";
+
 
 const products = () => {
-const products = useSelector((state)=> state.products.products);
-  console.log(products);
+const products = useSelector((state) => state.products.products);
+const user = useSelector((state) => state.user.users);
+const dispatch = useDispatch();
+
+const AddtoCartHandler = (product) => {
+  const copyuser = { ...user, cart: [...(user.cart || [])] };
+
+  const x = copyuser.cart.findIndex((c) => c.product === product.id);
+  console.log(x);
+
+  if (x === -1) {
+    copyuser.cart.push({ product, quantity: 1 });
+  } else {
+    copyuser.cart[x] = {
+      ...copyuser.cart[x],
+      quantity: copyuser.cart[x].quantity + 1,
+    };
+  }
+
+  // ✅ Pass both id and updated user object
+  dispatch(asyncUpdateuser(user.id, copyuser));
+
+  console.log(copyuser);
+};
+
+
   const renderproduct = products.map((product)=>{
     return (
       <div className="mt-14">
@@ -15,7 +41,7 @@ const products = useSelector((state)=> state.products.products);
         <h3 className= "text-lg font-semibold mb-2">{product.description.slice(0,100)}..</h3>
         
           <p className="text-xl font-bold mb-4">{product.price}$</p>
-          <button  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Add to cart</button>
+          <button onClick={() => AddtoCartHandler(product)}  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Add to cart</button>
         </div>
         <Link to={`product/${product.id}`}>More Info</Link>
 
