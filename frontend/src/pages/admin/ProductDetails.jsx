@@ -9,14 +9,15 @@ import { asyncupdateproduct , asyncdeleteproduct } from '../../store/actions/pro
 function ProductDetails() {
   const { id } = useParams();
    const navigate = useNavigate();
-  const  products  = useSelector((state) => state.products.products);
+  const products   = useSelector((state) => state.products.products);
 const user = useSelector((state) => state.user.users);
   console.log(user, "user");
-  console.log(products)
+  console.log(product)
   const product = products?.find((product) => product.id == id);
    const { register, reset, handleSubmit } = useForm(
     {
       defaultValues:{
+
         image: product?.image,
         title:product?.title,
         price:product?.price,
@@ -27,7 +28,7 @@ const user = useSelector((state) => state.user.users);
    );
    const dispatch = useDispatch();
  const UpdateProductHandler = (productData) => {
-  dispatch(asyncupdateproduct(id, productData));
+  dispatch(asyncupdateproduct(product.id,productData));
 };
 const deletehandler = () =>{
   dispatch(asyncdeleteproduct(id));
@@ -50,19 +51,19 @@ const deletehandler = () =>{
         {/* Product Content */}
         <div className="grid md:grid-cols-2 gap-6 p-6">
           {/* Image */}
-          <div className="flex justify-center items-center">
+          <div key={product?.id} className="flex justify-center items-center">
             <img 
-              src={product.image} 
-              alt={product.title} 
+              src={product?.image} 
+              alt={product?.title} 
               className="w-full max-w-sm object-contain rounded-lg shadow-md"
             />
           </div>
 
           {/* Details */}
           <div className="flex flex-col justify-center space-y-4">
-            <h1 className="text-3xl font-bold text-gray-800">{product.title}</h1>
-            <p className="text-lg text-gray-600">{product.description}</p>
-            <p className="text-2xl font-semibold text-green-600">₹ {product.price}</p>
+            <h1 className="text-3xl font-bold text-gray-800">{product?.title}</h1>
+            <p className="text-lg text-gray-600">{product?.description}</p>
+            <p className="text-2xl font-semibold text-green-600">₹ {product?.price}</p>
 
             <button className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
               Add to Cart
@@ -71,7 +72,7 @@ const deletehandler = () =>{
         </div>
       </div>
       <div className='mt-2 flex  justify-center'>
-        {user && user?.isAdmin &&
+        {user && user?.isAdmin==true &&
         <form
         onSubmit={handleSubmit(UpdateProductHandler)}
         className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8 space-y-6"

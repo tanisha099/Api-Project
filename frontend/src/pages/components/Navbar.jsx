@@ -4,7 +4,7 @@ import { asynclogoutuser } from '../../store/actions/userAction';
 function Navbar() {
    const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user.users);
+   const user = useSelector((state) => state.user.users); 
   console.log(user, "user");
 
   const logoutHandler = () =>{
@@ -56,7 +56,7 @@ function Navbar() {
             </NavLink>
             <NavLink to="/ProfileUser">Profile</NavLink>
             <button onClick={logoutHandler}>Logut</button>
-            <NavLinkLink to="/addtocartdetails">Go to Cart</NavLinkLink>
+            <NavLink to="/addtocartdetails">Go to Cart</NavLink>
             </>
     
           ) : (

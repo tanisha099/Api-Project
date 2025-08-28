@@ -18,7 +18,7 @@ const Mainroutes = () => {
            <Route path="/register" element={<Register/>}/>
             <Route path="/ProfileUser" element={
                 <AuthWrapper><ProfileUser/></AuthWrapper>}/>
-                <Route path="/cart" element={
+                <Route path="/addtocartdetails" element={
   <AuthWrapper><Cart/></AuthWrapper>
 }/>
             <Route path="/admin/create-product" element={

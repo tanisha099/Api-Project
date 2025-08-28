@@ -55,13 +55,13 @@ export const asyncregisteruser = (user) => async (dispatchEvent,getState)=>{
 
 export const asyncUpdateuser = (id, user) => async (dispatch) => {
   try {
-    const { data } = await axios.patch(`/users/${id}`, user); // ✅ id instead of whole user object
-    console.log(data);
+    const { data } = await axios.patch(`/users/${id}`, user);
+    console.log("Updated user:", data);
 
-    dispatch(asynccurrentuser());
     localStorage.setItem("user", JSON.stringify(data));
+    dispatch(asynccurrentuser()); // refresh state
   } catch (error) {
-    console.log(error);
+    console.log("Update failed:", error);
   }
 };
 export const asyncdeleteuser = (id) => async (dispatch) => {

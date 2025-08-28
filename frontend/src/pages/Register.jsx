@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { nanoid } from "nanoid";
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,15 +6,17 @@ import { asyncregisteruser } from "../store/actions/userAction";
 
 function Register() {
   const { register, reset, handleSubmit } = useForm();
-   const dispatch = useDispatch();
-   const Navigate =useNavigate();
+  const dispatch = useDispatch();
+  const Navigate = useNavigate();
+
   const RegisterHandler = (user) => {
     user.id = nanoid();
-    user.isAdmin = false;
     user.cart = [];
+    user.isAdmin = user.isAdmin === "true"; // dropdown se string aayega, isko boolean me convert karna hoga
     console.log(user);
     dispatch(asyncregisteruser(user));
-    Navigate("/login")
+    reset(); 
+    Navigate("/login");
   };
 
   return (
@@ -35,7 +36,7 @@ function Register() {
             type="text"
             className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
             placeholder="Ekanshi"
-            {...register("fullname")}
+            {...register("fullname", { required: true })}
           />
         </div>
 
@@ -48,7 +49,7 @@ function Register() {
             type="text"
             className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
             placeholder="_ekanshi9_"
-            {...register("username")}
+            {...register("username", { required: true })}
           />
         </div>
 
@@ -61,8 +62,22 @@ function Register() {
             type="password"
             className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
             placeholder="Enter your password"
-            {...register("password")}
+            {...register("password", { required: true })}
           />
+        </div>
+
+        {/* Admin Role */}
+        <div>
+          <label className="block mb-1 text-sm font-medium text-gray-700">
+            Role
+          </label>
+          <select
+            {...register("isAdmin")}
+            className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          >
+            <option value="false">User</option>
+            <option value="true">Admin</option>
+          </select>
         </div>
 
         {/* Submit Button */}
@@ -73,7 +88,10 @@ function Register() {
           Register User
         </button>
         <p>
-            You have an account ? <Link to="/login">Login</Link>
+          You have an account?{" "}
+          <Link to="/login" className="text-pink-600 font-semibold">
+            Login
+          </Link>
         </p>
       </form>
     </div>

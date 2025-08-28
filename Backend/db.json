@@ -15,6 +15,14 @@
       "price": "1200",
       "description": "“These classic black trousers are designed with a sleek straight fit, offering both comfort and style. Made from premium quality fabric, they feature a smooth finish, mid-rise waist, and versatile design that pairs well with formal shirts or casual tees. Perfect for office wear, evening outings, or everyday sophistication.”",
       "category": "Mens Trouser"
+    },
+    {
+      "id": "dk7HLXqd5XzVPH684mw4c",
+      "image": "https://styleunion.in/cdn/shop/files/YWSK00039BLACK_1.jpg?v=1749562524&width=1200",
+      "title": "Mini Skirt",
+      "price": "1000",
+      "description": "A skirt is a garment that hangs from the waist or hips and covers the lower body. Skirts can be described in many ways, including by their cut, length, material, and special features",
+      "category": "Skirt"
     }
   ],
   "users": [
@@ -23,54 +31,63 @@
       "fullname": "Neha Misra",
       "username": "nehamisra23@gmail.com",
       "password": "NehaSharma2123",
-      "isAdmin": true,
-      "cart": []
+      "isAdmin": false,
+      "cart": [
+        {
+          "product": {
+            "id": "l8bNHzT5ATdOxAL6jwMj5",
+            "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
+            "title": "white Shirt ",
+            "price": "4000",
+            "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
+            "category": "Shirt"
+          },
+          "quantity": 4
+        },
+        {
+          "product": {
+            "id": "dk7HLXqd5XzVPH684mw4c",
+            "image": "https://styleunion.in/cdn/shop/files/YWSK00039BLACK_1.jpg?v=1749562524&width=1200",
+            "title": "Mini Skirt",
+            "price": "1000",
+            "description": "A skirt is a garment that hangs from the waist or hips and covers the lower body. Skirts can be described in many ways, including by their cut, length, material, and special features",
+            "category": "Skirt"
+          },
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "gxCMSk8W3x8YZYeWUQGqW",
       "fullname": "Akash Tiwari",
       "username": "akash123@gmail.com",
       "password": "Mynameis123",
-      "cart": [
-        {
-          "productId": "l8bNHzT5ATdOxAL6jwMj5",
-          "quantity": 2
-        },
-        {
-          "productId": "mp20-xw-GBvUcsyMU7sX5",
-          "quantity": 6
-        }
-      ]
+      "isAdmin": true,
+      "cart": []
     },
     {
-      "id": "qHr8K3mDEgAFd2t4xW_jJ",
-      "fullname": "Manoj",
-      "username": "manojdada23@gmail.com",
-      "password": "Monojdada12",
-      "cart": [
-        {
-          "product": {
-            "id": "l8bNHzT5ATdOxAL6jwMj5",
-            "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
-            "title": "white Shirt ",
-            "price": "4000",
-            "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
-            "category": "Shirt"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": "l8bNHzT5ATdOxAL6jwMj5",
-            "image": "https://krisandjohn.in/cdn/shop/files/57_29a4954c-add6-41fd-bc31-da9d4b55fc9c.jpg?v=1752842233&width=1200",
-            "title": "white Shirt ",
-            "price": "4000",
-            "description": "Classic collar, full sleeves—polished enough for office wear, relaxed enough for smart-casual styles.",
-            "category": "Shirt"
-          },
-          "quantity": 1
-        }
-      ]
+      "id": "_iS55gbfYHowGlX5BiW7b",
+      "fullname": "Muskan ",
+      "username": "muskan8@gmail.com",
+      "password": "Muskan@123",
+      "isAdmin": false,
+      "cart": []
+    },
+    {
+      "id": "67eBjNllNkQ0ysmV606HS",
+      "fullname": "Karan",
+      "username": "karan2004@gmail.com",
+      "password": "Karanskater",
+      "isAdmin": true,
+      "cart": []
+    },
+    {
+      "id": "bxIFFfP_-oqUxZH1dbCeP",
+      "fullname": "Shirin",
+      "username": "shirin20@gmail.com",
+      "password": "Shirin123",
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "carts": []

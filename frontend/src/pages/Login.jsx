@@ -7,14 +7,12 @@ function Login() {
   const { register, reset, handleSubmit } = useForm();
 const dispatch = useDispatch();
 const navigate = useNavigate();
-
   const LoginHandler = (user) => {
     console.log(user, "user");
   dispatch(asyncloginuser(user)).then(() => {
   navigate("/");
 });
   };
-
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-rose-200 via-rose-100 to-pink-200 p-4">
       <form

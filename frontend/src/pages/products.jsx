@@ -9,21 +9,19 @@ const user = useSelector((state) => state.user.users);
 const dispatch = useDispatch();
 
 const AddtoCartHandler = (product) => {
-  const copyuser = { ...user, cart: [...(user.cart || [])] };
+  const copyuser = { ...user, cart: [...user.cart] };
 
-  const x = copyuser.cart.findIndex((c) => c.product === product.id);
+  const x = copyuser.cart.findIndex((c) => c.product.id == product.id);
   console.log(x);
 
-  if (x === -1) {
+  if (x == -1) {
     copyuser.cart.push({ product, quantity: 1 });
   } else {
     copyuser.cart[x] = {
-      ...copyuser.cart[x],
-      quantity: copyuser.cart[x].quantity + 1,
-    };
+      product,
+      quantity:copyuser.cart[x].quantity + 1,
+    }
   }
-
-  // ✅ Pass both id and updated user object
   dispatch(asyncUpdateuser(user.id, copyuser));
 
   console.log(copyuser);
@@ -32,7 +30,7 @@ const AddtoCartHandler = (product) => {
 
   const renderproduct = products.map((product)=>{
     return (
-      <div className="mt-14">
+      <div className="mt-14 ">
        <div className="p-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div  className="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200" key={product.id}>
         <img className="object-cover h-48 w-full" src={product.image} alt=""  />
@@ -44,12 +42,9 @@ const AddtoCartHandler = (product) => {
           <button onClick={() => AddtoCartHandler(product)}  className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Add to cart</button>
         </div>
         <Link to={`product/${product.id}`}>More Info</Link>
-
       </div>
+      </div>    
       </div>
-      
-      </div>
-     
     )
   })
   return products.length > 0 ? <div>{renderproduct}</div> : "Loading..."
