@@ -12,7 +12,6 @@ function ProductDetails() {
   const products   = useSelector((state) => state.products.products);
 const user = useSelector((state) => state.user.users);
   console.log(user, "user");
-  console.log(product)
   const product = products?.find((product) => product.id == id);
    const { register, reset, handleSubmit } = useForm(
     {

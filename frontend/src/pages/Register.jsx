@@ -12,7 +12,7 @@ function Register() {
   const RegisterHandler = (user) => {
     user.id = nanoid();
     user.cart = [];
-    user.isAdmin = user.isAdmin === "true"; // dropdown se string aayega, isko boolean me convert karna hoga
+    user.isAdmin = user.isAdmin === "true"; 
     console.log(user);
     dispatch(asyncregisteruser(user));
     reset(); 

@@ -23,7 +23,127 @@
       "price": "1000",
       "description": "A skirt is a garment that hangs from the waist or hips and covers the lower body. Skirts can be described in many ways, including by their cut, length, material, and special features",
       "category": "Skirt"
-    }
+    },
+    {
+    "id": "p1",
+    "image": "https://krisandjohn.in/cdn/shop/files/45_9c86be.jpg?v=1752842233&width=1200",
+    "title": "Black Polo T-Shirt",
+    "price": "1800",
+    "description": "Soft cotton polo with short sleeves and ribbed collar. Perfect for casual outings or semi-formal looks.",
+    "category": "T-Shirt"
+  },
+  {
+    "id": "p2",
+    "image": "https://krisandjohn.in/cdn/shop/files/67_89ab12.jpg?v=1752842233&width=1200",
+    "title": "Blue Denim Jeans",
+    "price": "3200",
+    "description": "Slim-fit stretchable denim jeans with a mid-rise waist. Stylish and durable for everyday wear.",
+    "category": "Jeans"
+  },
+  {
+    "id": "p3",
+    "image": "https://krisandjohn.in/cdn/shop/files/78_23bc11.jpg?v=1752842233&width=1200",
+    "title": "Olive Green Hoodie",
+    "price": "2500",
+    "description": "Comfortable fleece hoodie with front pocket and adjustable drawstring. Great for winter layering.",
+    "category": "Hoodie"
+  },
+  {
+    "id": "p4",
+    "image": "https://krisandjohn.in/cdn/shop/files/12_56xy18.jpg?v=1752842233&width=1200",
+    "title": "Brown Leather Jacket",
+    "price": "6500",
+    "description": "Classic biker-style leather jacket with zipper closure and side pockets. Durable and stylish.",
+    "category": "Jacket"
+  },
+  {
+    "id": "p5",
+    "image": "https://krisandjohn.in/cdn/shop/files/34_22kl19.jpg?v=1752842233&width=1200",
+    "title": "Grey Sweatpants",
+    "price": "2000",
+    "description": "Relaxed-fit joggers with elastic waistband and ankle cuffs. Ideal for gym or casual wear.",
+    "category": "Bottomwear"
+  },
+  {
+    "id": "p6",
+    "image": "https://krisandjohn.in/cdn/shop/files/56_17nm22.jpg?v=1752842233&width=1200",
+    "title": "Checked Casual Shirt",
+    "price": "2700",
+    "description": "Cotton flannel shirt with red and black check pattern. Wear open over a tee or buttoned-up.",
+    "category": "Shirt"
+  },
+  {
+    "id": "p7",
+    "image": "https://krisandjohn.in/cdn/shop/files/77_44op31.jpg?v=1752842233&width=1200",
+    "title": "White Sneakers",
+    "price": "3500",
+    "description": "Minimalist white sneakers with cushioned sole. Works with jeans, shorts, or casual trousers.",
+    "category": "Footwear"
+  },
+  {
+    "id": "p8",
+    "image": "https://krisandjohn.in/cdn/shop/files/88_11qr33.jpg?v=1752842233&width=1200",
+    "title": "Black Formal Trousers",
+    "price": "3000",
+    "description": "Tailored-fit trousers for office and events. Made with wrinkle-resistant premium fabric.",
+    "category": "Trousers"
+  },
+  {
+    "id": "p9",
+    "image": "https://krisandjohn.in/cdn/shop/files/99_22st44.jpg?v=1752842233&width=1200",
+    "title": "Navy Blue Blazer",
+    "price": "7200",
+    "description": "Single-breasted blazer with two-button closure. Perfect for formal and semi-formal looks.",
+    "category": "Blazer"
+  },
+  {
+    "id": "p10",
+    "image": "https://krisandjohn.in/cdn/shop/files/11_33uv55.jpg?v=1752842233&width=1200",
+    "title": "Casual White Sneakers",
+    "price": "2800",
+    "description": "Breathable mesh sneakers for daily use. Lightweight and comfortable for long walks.",
+    "category": "Footwear"
+  },
+  {
+    "id": "p11",
+    "image": "https://krisandjohn.in/cdn/shop/files/22_44wx66.jpg?v=1752842233&width=1200",
+    "title": "Graphic T-Shirt",
+    "price": "1500",
+    "description": "Cotton crewneck tee with bold front print. Adds a modern vibe to casual outfits.",
+    "category": "T-Shirt"
+  },
+  {
+    "id": "p12",
+    "image": "https://krisandjohn.in/cdn/shop/files/33_55yz77.jpg?v=1752842233&width=1200",
+    "title": "Beige Chinos",
+    "price": "2900",
+    "description": "Slim-fit chinos with button closure and side pockets. Ideal for smart-casual dressing.",
+    "category": "Bottomwear"
+  },
+  {
+    "id": "p13",
+    "image": "https://krisandjohn.in/cdn/shop/files/44_66ab88.jpg?v=1752842233&width=1200",
+    "title": "Denim Jacket",
+    "price": "4200",
+    "description": "Washed blue denim jacket with front button closure. A wardrobe essential for layering.",
+    "category": "Jacket"
+  },
+  {
+    "id": "p14",
+    "image": "https://krisandjohn.in/cdn/shop/files/55_77cd99.jpg?v=1752842233&width=1200",
+    "title": "Black Round Sunglasses",
+    "price": "2200",
+    "description": "UV-protected round sunglasses with lightweight metal frame. Stylish and durable.",
+    "category": "Accessories"
+  },
+  {
+    "id": "p15",
+    "image": "https://krisandjohn.in/cdn/shop/files/66_88de00.jpg?v=1752842233&width=1200",
+    "title": "White Kurta",
+    "price": "2600",
+    "description": "Traditional cotton kurta with mandarin collar. Perfect for ethnic and festive occasions.",
+    "category": "Ethnic Wear"
+  }
   ],
   "users": [
     {
@@ -31,7 +151,7 @@
       "fullname": "Neha Misra",
       "username": "nehamisra23@gmail.com",
       "password": "NehaSharma2123",
-      "isAdmin": false,
+      "isAdmin": true,
       "cart": [
         {
           "product": {
