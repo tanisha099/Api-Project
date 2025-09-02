@@ -4,13 +4,14 @@ import { asyncUpdateuser } from "../store/actions/userAction";
 import { Suspense, useEffect, useState } from "react";
 import axios from "../api/axiosconfig";
   import InfiniteScroll from 'react-infinite-scroll-component';
+import { loadlazyproducts } from "../store/reducers/productSlice";
 const Products = () => {
-  //const products = useSelector((state) => state.products.products);
+  const products = useSelector((state) => state.products.products);
   const user = useSelector((state) => state.user.users);
   const dispatch = useDispatch();
- const [products, setproducts] = useState([]);
+// const {products}= useSelector((state)=>state.products);
  const [hasMore, sethasMore] = useState(true);
-
+console.log(products);
 const fetchproducts = async () => {
   try {
     const { data } = await axios.get(
@@ -20,9 +21,10 @@ const fetchproducts = async () => {
     if (data.length === 0) {
       sethasMore(false);
     } else {
-      setproducts((prev) => [...prev, ...data]); // ✅ append new data
-    }
-  } catch (error) {
+      sethasMore(true);
+     dispatch(loadlazyproducts(data));
+  } 
+}catch (error) {
     console.log(error);
   }
 };

@@ -4,7 +4,7 @@ import Mainroutes from "./routes/Mainroutes"
 import { useDispatch, useSelector } from 'react-redux';
 import { loadUsers } from './store/reducers/userSlice';
 import { asynccurrentuser } from './store/actions/userAction';
-import { asyncloadproducts } from './store/actions/productActions';
+//import { asyncloadproducts } from './store/actions/productActions';
 function App() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
@@ -12,11 +12,7 @@ const user = useSelector((state) => state.user.users);
   useEffect(() => {
 !user && dispatch(asynccurrentuser()); 
 }, [user]);
- useEffect(() => {
-  products.length ==0 &&
-  dispatch(asyncloadproducts());
- 
-}, [products]);
+
 
   return (
     <div>
